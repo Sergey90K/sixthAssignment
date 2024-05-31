@@ -3,7 +3,6 @@ package com.shpp.p2p.cs.skurochka.assignment6;
 import acm.graphics.GImage;
 import acm.util.ErrorException;
 import com.shpp.cs.a.graphics.WindowProgram;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;

@@ -15,13 +15,13 @@ public class HistogramEqualizationLogic {
      * @return A histogram of those luminances.
      */
     public static int[] histogramFor(int[][] luminances) {
-            int [] result = new int[256];
-            for (int i = 0; i< luminances.length; i++){
-                for (int j = 0; j< luminances[i].length; j++){
-                    System.out.println(luminances[i][j]);
-                   result [GImage.getAlpha(luminances[i][j])] = result [GImage.getAlpha(luminances[i][j])] + 1;
-                }
+        int[] result = new int[256];
+        for (int i = 0; i < luminances.length; i++) {
+            for (int j = 0; j < luminances[i].length; j++) {
+                System.out.println(luminances[i][j]);
+                result[GImage.getAlpha(luminances[i][j])] = result[GImage.getAlpha(luminances[i][j])] + 1;
             }
+        }
         return null;
     }
 
@@ -36,7 +36,7 @@ public class HistogramEqualizationLogic {
      * @return The cumulative frequency array.
      */
     public static int[] cumulativeSumFor(int[] histogram) {
-		/* TODO: Implement this method! */
+        /* TODO: Implement this method! */
         return null;
     }
 
@@ -47,7 +47,7 @@ public class HistogramEqualizationLogic {
      * @return The total number of pixels in that image.
      */
     public static int totalPixelsIn(int[][] luminances) {
-		/* TODO: Implement this method! */
+        /* TODO: Implement this method! */
         return 0;
     }
 
@@ -62,7 +62,7 @@ public class HistogramEqualizationLogic {
      * @return The luminances of the image formed by applying histogram equalization.
      */
     public static int[][] equalize(int[][] luminances) {
-		/* TODO: Implement this method! */
+        /* TODO: Implement this method! */
         return null;
     }
 }

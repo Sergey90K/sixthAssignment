@@ -12,9 +12,30 @@ public class ToneMatrixLogic {
      */
     public static double[] matrixToMusic(boolean[][] toneMatrix, int column, double[][] samples) {
         double[] result = new double[ToneMatrixConstants.sampleSize()];
+        for (int i = 0; i < toneMatrix.length; i++) {
+            if (toneMatrix[i][column]) {
+                for (int j = 0; j < samples[i].length; j++) {
+                    result[j] += samples[i][j];
+                }
+            }
+        }
+        return normalisationSound(result);
+    }
 
-		/* TODO: Fill this in! */
-
+    private static double[] normalisationSound(double[] innerSound) {
+        double[] result = new double[innerSound.length];
+        double maxSoundValue = 0.0;
+        for (double sound : innerSound) {
+            if (Math.abs(maxSoundValue) < Math.abs(sound)) {
+                maxSoundValue = sound;
+            }
+        }
+        if (maxSoundValue == 0.0) {
+            return new double[innerSound.length];
+        }
+        for (int i = 0; i < innerSound.length; i++) {
+            result[i] = innerSound[i] / maxSoundValue;
+        }
         return result;
     }
 }
